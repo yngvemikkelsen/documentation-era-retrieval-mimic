@@ -1,0 +1,9 @@
+era,records,metric,bm25,unadapted,mismatched,mixed,matched
+mimic3,earlier,MRR,0.4395,0.1642,0.3105,,0.4018
+mimic3,earlier,recall@1,0.3650,0.1020,0.2270,0.2710,0.2930
+mimic3,earlier,recall@5,0.5260,0.2430,0.4150,0.4830,0.5460
+mimic3,earlier,recall@10,0.6040,0.3200,0.5230,0.5880,0.6500
+mimic4,later,MRR,0.4773,0.2163,0.3962,,0.4257
+mimic4,later,recall@1,0.4140,0.1520,0.3180,0.3130,0.3430
+mimic4,later,recall@5,0.5630,0.3050,0.5060,,0.5380
+mimic4,later,recall@10,0.6160,0.3740,0.5900,0.5760,0.6120

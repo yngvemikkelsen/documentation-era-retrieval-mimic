@@ -1,0 +1,5 @@
+change,records,retrieved_before,retrieved_after,exits,entries,exit_rate_pct
+current_era_model_replaces_historical_era_model,historical,650,523,190,63,29.2
+pooled_model_replaces_historical_era_model,historical,650,588,126,64,19.4
+historical_era_model_replaces_current_era_model,current,612,590,94,72,15.4
+matched_model_replaces_unadapted_adoption,historical,320,650,28,358,8.8

@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: If you use this software, please cite both the software and the paper.
+title: >-
+  documentation-era-retrieval-mimic: analysis code for local contrastive
+  adaptation of a clinical retrieval encoder across documentation eras
+abstract: >-
+  Analysis code for a complete within-unit 2x2 experiment measuring whether
+  local contrastive adaptation of a dense retrieval encoder on one documentation
+  era degrades retrieval of records written under another era, within a single
+  institution (Beth Israel Deaconess Medical Center, via MIMIC-III and
+  MIMIC-IV-Note). Includes the cross-corpus near-duplicate detector and its
+  planted-duplicate control, the calendar-restriction verification, the preflight
+  and post-run verification gates, the paired and patient-clustered bootstraps,
+  the lexical baseline and the record-flux counter.
+type: software
+authors:
+  - family-names: Mikkelsen
+    given-names: Yngve
+    orcid: https://orcid.org/0000-0003-1543-3805
+    affiliation: Independent Researcher, Jar, Norway
+version: 1.0.0
+date-released: 2026-11-19
+license: MIT
+repository-code: https://github.com/yngvemikkelsen/documentation-era-retrieval-mimic
+keywords:
+  - clinical information retrieval
+  - dense retrieval
+  - domain adaptation
+  - electronic health records
+  - temporal transportability
+  - MIMIC
