@@ -43,6 +43,7 @@ REPRODUCE.md the run order, the gates, and what each exit code means
 | `paper21c_asym_v1.py` | The asymmetry D = d(earlier) − d(later), with its own interval. |
 | `paper21c_robust_v2.py` | Patient-clustered intervals and the untrained BM25 baseline. |
 | `paper21c_flux_v1.py` | Records entering and leaving the top 10, behind a net recall change. |
+| `paper21c_interaction_v1.py` | The conventional training-era by evaluation-era interaction alongside the asymmetry D. |
 | `paper21c_anchorcheck_v1.py` | Verifies the calendar restriction against admission dates rather than against the anchor band label. |
 | `paper21c_dupyear_v1.py` | Which MIMIC-IV year band each detected duplicate sits in. The analysis that decided the design. |
 
@@ -52,6 +53,7 @@ REPRODUCE.md the run order, the gates, and what each exit code means
 |---|---|
 | `primary_contrasts.csv` | b, c and d on both eras, at four metrics, with query-level and patient-clustered intervals side by side. |
 | `asymmetry_D.csv` | D in the primary condition and the three controls. |
+| `asymmetry_and_interaction.csv` | The two matched-era advantages with both quantities built from them: their difference D and their sum, the conventional interaction. |
 | `levels.csv` | Absolute retrieval levels for BM25, unadapted, mismatched, pooled and matched. |
 | `bm25_contrasts.csv` | Every dense condition minus the lexical baseline, patient-clustered. |
 | `dose_ladder.csv` | Every contrast at 250, 500, 1,000 and 2,500 steps. |
@@ -139,6 +141,14 @@ the results. None of them affects a reported number.
 5. **`--train-pool` is not recorded in cell metadata.** It is recoverable only
    from the run log line `building training pairs from N held-out notes`, which
    is why `paper21c_verify_v1.py` takes `--logdir` and `--expect-train-pool`.
+6. **A wrong comment about MIMIC-IV de-identification.** The comment above
+   `DEID_RE` in `paper21c_crossover_v5.py` says MIMIC-IV strips placeholders
+   "to blanks". MIMIC-IV-Note replaces removed information with three
+   underscores. `DEID_RE` matches the bracketed MIMIC-III form only, so
+   `--strip-deid` removes the earlier corpus's markers and leaves the later
+   corpus's underscores in place. That is what the de-identification arm
+   actually tested, and the manuscript now says so. The comment also names the
+   flag `--scrub-deid`; the flag is `--strip-deid`.
 
 ---
 

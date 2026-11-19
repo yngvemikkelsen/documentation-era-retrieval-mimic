@@ -81,6 +81,10 @@ uv run code/paper21c_robust_v2.py \
 # Records entering and leaving the top 10
 uv run code/paper21c_flux_v1.py --workdir ~/projects/paper21c_v8
 
+# The conventional interaction alongside D
+uv run code/paper21c_interaction_v1.py --workdir ~/projects/paper21c_v8 \
+    --out ~/projects/paper21c_interaction.json
+
 # Calendar restriction verified against admission dates, not the band label
 uv run code/paper21c_anchorcheck_v1.py --mimic4 ~/physionet.org/files/mimiciv/3.1
 
